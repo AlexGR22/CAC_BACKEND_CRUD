@@ -1,30 +1,49 @@
-    {
-      "title": "Un animal salvaje",
-      "writer": "Joel Dicker",
-      "editorial": "Alfaguara",
-      "year": 2024
-    }    
-    {
-      "title": "Si te gusta la oscuridad",
-      "writer": "Stephen King",
-      "editorial": "Plaza & Janés",
-      "year": 2024
-    }
-    {
-      "title": "Un lugar soleado para gente sombria",
-      "writer": "Mariana Enriquez",
-      "editorial": "Anagrama",
-      "year": 2024
-    }
-    {
-      "title": "Comentarios al náucrato",
-      "writer": "Tomas Rebord",
-      "editorial": "Anagrama",
-      "year": 2024
-    }
-    {
-      "title": "Fuego y sangre",
-      "writer": "George R. R. Martin",
-      "editorial": "Plaza & Janés",
-      "year": 2018
-    }
+  {
+    "title": "Un animal salvaj",
+    "writer": "Joel DickeRRR",
+    "editorial": "Alfaguara",
+    "year": 2028,
+    "writer_id": 1
+  },
+  {
+    "title": "Si te gusta la oscuridad",
+    "writer": "Stephen King",
+    "editorial": "Plaza & Janés",
+    "year": 2024,
+    "writer_id": 2
+  },
+  {
+    "title": "Un lugar soleado para gente sombría",
+    "writer": "Mariana Enriquez",
+    "editorial": "Anagrama",
+    "year": 2024,
+    "writer_id": 3
+  },
+  {
+    "title": "Comentarios al naufragio",
+    "writer": "Tomas Rebord",
+    "editorial": "Anagrama",
+    "year": 2024,
+    "writer_id": 4
+  },
+  {
+    "title": "El resplandor",
+    "writer": "Stephen King",
+    "editorial": "Plaza & Janés",
+    "year": 2017,
+    "writer_id": 2
+  },
+  {
+    "title": "El juego del año",
+    "writer": "Stephen King",
+    "writer_id": 2,
+    "editorial": "Plaza & Janés",
+    "year": 2015
+  },
+  {
+    "title": "El camino de los pecados",
+    "writer": "Mariana Enriquez",
+    "editorial": "Anagrama",
+    "year": 2020,
+    "writer_id": 3
+  }

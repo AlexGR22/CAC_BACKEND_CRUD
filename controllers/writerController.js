@@ -1,18 +1,11 @@
-/*** METODOS ***
- * .getAllBooks
- * .getBookById
- * .createBook
- * .updateBook
- * .deleteBook
- */
 
 // Importamos el módulo db
 const db = require("../db/db.js");
 
 // getAllBooks
-const getAllBooks = (req, res)=>{
+const getAllWriters = (req, res)=>{
     // Consulta para traer todos los libros cargados de la base de datos
-    const sql = 'SELECT * FROM books';
+    const sql = 'SELECT * FROM writers';
 
     // Enviamos la consulta a la bbdd
     db.query(sql, (error, results)=>{
@@ -23,13 +16,13 @@ const getAllBooks = (req, res)=>{
     });
 };
 
-// getBookById
-const getBookById = (req, res)=>{
+
+const getWriterById = (req, res)=>{
     // Obtenemos id:
     const {id} = req.params;
 
     // Consulta a la bbdd por id
-    const sql = 'SELECT * FROM books WHERE id = ?';
+    const sql = 'SELECT * FROM writers WHERE id = ?';
     
     // Enviamos la consulta a la bbdd
     db.query(sql,[id], (error, result)=>{
@@ -41,59 +34,59 @@ const getBookById = (req, res)=>{
 }
 
 // createBook
-const createBook = (req, res)=>{
-    const {title, writer, editorial, year, writer_id} = req.body;
+const createWriter = (req, res)=>{
+    const {name, surname, age, id} = req.body;
     // Cargar libros a la base de datos
-    const sql = 'INSERT INTO books (title, writer, editorial, year, writer_id) VALUES (?,?,?,?,?)';
+    const sql = 'INSERT INTO writers (name,surname,age,id) VALUES (?,?,?,?)';
 
     // Enviamos la consulta a la bbdd
-    db.query(sql,[title, writer, editorial, year,writer_id], (error, result)=>{
+    db.query(sql,[name,surname,age,id], (error, result)=>{
         // Error:
         if(error){throw error};
         // Exito:
-        res.json({mensaje: "Libro cargado"});
+        res.json({mensaje: "Escritor cargado"});
     });
 }
 
 // updateBook
-const updateBook = (req, res)=>{
+const updateWriter = (req, res)=>{
     const {id} = req.params;
-    const {title, writer, editorial, year} = req.body;
+    const {name, surname, age} = req.body;
 
     // Consulta con marcadores
-    const sql = `UPDATE books SET title = ?, writer = ?, editorial = ?, year = ? WHERE id =  ${id}`;
+    const sql = `UPDATE writers SET name = ?, surname = ?, age = ? WHERE id =  ${id}`;
 
     // Enviamos la consulta a la bbdd
-    db.query(sql, [title, writer, editorial, year], (error, result)=>{
+    db.query(sql, [name, surname, age], (error, result)=>{
         // Error:
         if(error){throw error};
         // Exito:
-        res.json({mensaje: "Libro actualizado"});
+        res.json({mensaje: "Escritor actualizado"});
     });
 }
 
 // deleteBook
-const deleteBook = (req, res)=>{
+const deleteWriter = (req, res)=>{
     // Desestructuración por id
     const {id} = req.params;
 
     // Consulta por sql
-    const sql = 'DELETE FROM books WHERE id = ?';
+    const sql = 'DELETE FROM writers WHERE id = ?';
 
     // Enviamos la consulta a la bbdd
     db.query(sql, [id], (error, result)=>{
         // Error:
         if(error){throw error};
         // Exito:
-        res.json({mensaje: "Libro borrado"});
+        res.json({mensaje: "Escritor borrado"});
     }); 
 }
 
 // Exportamos el módulo con los métodos
 module.exports = {
-    getAllBooks,
-    getBookById,
-    createBook,
-    updateBook,
-    deleteBook
+    getAllWriters,
+    getWriterById,
+    createWriter,
+    updateWriter,
+    deleteWriter
 };

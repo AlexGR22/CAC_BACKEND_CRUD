@@ -10,23 +10,23 @@ const express = require("express");
 const router = express.Router();
 
 // Importamos el controlador de funciones
-const bookController = require("../controllers/bookController");
+const writerController = require("../controllers/writerController");
 
 // *** SOLICITUDES ***
 // GET: Obtener listado completo de libros
-router.get("/listado", bookController.getAllBooks);
+router.get("/listado", writerController.getAllWriters);
 
 // GET: Obtener libro por id
-router.get("/:id", bookController.getBookById);
+router.get("/:id", writerController.getWriterById);
 
 // POST: Crear libro
-router.post("/add", bookController.createBook);
+router.post("/add", writerController.createWriter);
 
 // PUT: Crear libro
-router.put("/:id", bookController.updateBook);
+router.put("/:id", writerController.updateWriter);
 
 // DELETE: Eliminar libro
-router.delete("/delete/:id", bookController.deleteBook);
+router.delete("/delete/:id", writerController.deleteWriter);
 
 // Exportamos el módulo
 module.exports = router;
