@@ -1,0 +1,30 @@
+    {
+      "title": "Un animal salvaje",
+      "writer": "Joel Dicker",
+      "editorial": "Alfaguara",
+      "year": 2024
+    }    
+    {
+      "title": "Si te gusta la oscuridad",
+      "writer": "Stephen King",
+      "editorial": "Plaza & Janés",
+      "year": 2024
+    }
+    {
+      "title": "Un lugar soleado para gente sombria",
+      "writer": "Mariana Enriquez",
+      "editorial": "Anagrama",
+      "year": 2024
+    }
+    {
+      "title": "Comentarios al náucrato",
+      "writer": "Tomas Rebord",
+      "editorial": "Anagrama",
+      "year": 2024
+    }
+    {
+      "title": "Fuego y sangre",
+      "writer": "George R. R. Martin",
+      "editorial": "Plaza & Janés",
+      "year": 2018
+    }
